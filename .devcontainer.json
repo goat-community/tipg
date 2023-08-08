@@ -1,0 +1,38 @@
+// See https://aka.ms/vscode-remote/containers for the
+// documentation about the devcontainer.json format
+{
+    "name": "API DevContainer",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "app",
+    "workspaceFolder": "/app",
+    "shutdownAction": "none",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"ms-python.python",
+				"ms-vscode.cpptools",
+				"twxs.cmake",
+				"ms-vscode.cmake-tools",
+				"njpwerner.autodocstring",
+				"donjayamanne.githistory",
+				"ms-python.black-formatter",
+				"genieai.chatgpt-vscode",
+                "charliermarsh.ruff",
+                "github.copilot-nightly"
+
+			],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.fixAll": true
+                }
+            }
+        }
+    },
+    "runServices": [
+        "app"
+    ]
+}
